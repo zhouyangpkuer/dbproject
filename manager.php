@@ -107,7 +107,7 @@
 
 
   print "  <div class='container marketing'> <div class='row'>";
-
+  print $total_num_block; 
       for($i = 0; $i < $total_num_block; $i++)
       {
         $datas_block = mysqli_fetch_array($result_id_block);
