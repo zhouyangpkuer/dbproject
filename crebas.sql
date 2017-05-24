@@ -98,13 +98,13 @@ alter table Topic add constraint FK_Blockhave foreign key (BlockId)
 alter table Topic add constraint FK_create foreign key (UserId)
       references User (UserId) on delete restrict on update restrict;
 
-alter table favoriteBlock add constraint "FK_be favorited2" foreign key (UserId)
+alter table favoriteBlock add constraint FK_be favorited2 foreign key (UserId)
       references User (UserId) on delete restrict on update restrict;
 
 alter table favoriteBlock add constraint FK_favorite2 foreign key (BlockId)
       references Block (BlockId) on delete restrict on update restrict;
 
-alter table favoriteTopic add constraint "FK_be favorited" foreign key (UserId)
+alter table favoriteTopic add constraint FK_be favorited foreign key (UserId)
       references User (UserId) on delete restrict on update restrict;
 
 alter table favoriteTopic add constraint FK_favorite foreign key (TopicId)
