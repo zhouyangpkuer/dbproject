@@ -71,7 +71,7 @@
   <div class="col-xs-12 col-sm-9">
 
       <div class="jumbotron">
-            <h1>Your favorate block!</h1>
+            <h1>Your favorate blocks!</h1>
             <p>You can click on each block, and then you will get more details about this block!</p>
       </div>
   </div>
@@ -107,7 +107,7 @@
   $total_num_block = mysqli_num_rows($result_id_block);
 
 
-  print "  <div class='container marketing'> <div class='row'>";
+  print "  <div class='container'> <div class='row'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_block; $i++)
@@ -128,7 +128,9 @@
           print "</h2>
           <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
           <p>
-          <a class='btn btn-default' href='#' role='button'>View details &raquo;</a></p>
+          <a class='btn btn-default' href='";
+          print $block_url; 
+          print "' role='button'>View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->";
       }
 
@@ -138,25 +140,99 @@
 
 
 
-    <div class='container'>
-      <!-- Example row of columns -->
-      <div class='row'>
-        <div class='col-md-4'>
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class='btn btn-default' href='#' role='button'>View details &raquo;</a></p>
-        </div>
-        <div class='col-md-4'>
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class='btn btn-default' href='#' role='button'>View details &raquo;</a></p>
-       </div>
-        <div class='col-md-4'>
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class='btn btn-default' href='#' role='button'>View details &raquo;</a></p>
-        </div>
+  <div class="container">
+
+  <div class="row row-offcanvas row-offcanvas-right">
+
+  <div class="col-xs-12 col-sm-9">
+
+      <div class="jumbotron">
+            <h1>Your favorate topics!</h1>
+            <p>You can click on each topic, and then you will get more details about this topic!</p>
       </div>
+  </div>
+  </div>
+  </div>
+
+
+    
+
+
+<?php
+  $Username = $_GET["user_id"];
+  
+  $Hostname = "localhost";
+  $DBName = "forum";
+  $User = "root";
+  $PasswordP = "";
+
+  $con = mysqli_connect($Hostname, $User, $PasswordP) or die("Cant connect into database");
+  mysqli_select_db($con, $DBName) or die("Cant connect into database");
+
+  $SQL = "SELECT * FROM User WHERE UserName = '".$Username."';";
+  $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+  $datas = mysqli_fetch_array($result_id);
+  $UserId = $datas["UserId"];
+  // mysqli_close();
+
+
+  $SQL = "SELECT * FROM favoriteTopic WHERE UserId = '".$UserId."';";
+  $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+  $datas = mysqli_fetch_array($result_id);
+  $TopicId = $datas["TopicId"];
+
+  $SQL = "SELECT * FROM Topic WHERE TopicId = '".$TopicId."';";
+  $result_id_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+  $total_num_topic = mysqli_num_rows($result_id_topic);
+
+
+  print "  <div class='container'> <div class='row'>";
+  // print $total_num_block; 
+
+      for($i = 0; $i < $total_num_topic; $i++)
+      {
+        $datas_topic = mysqli_fetch_array($result_id_topic);
+        
+        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"];
+        
+        print "<div class='col-lg-4'><h2>";
+          print $datas_topic["TopicTitle"];
+          print "</h2><p>";
+          print $datas_topic["TopicContent"];
+          print "
+          </p>  
+          <p>
+          <a class='btn btn-default' href='";
+          print $topic_url; 
+          print "' role='button'>View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->";
+      }
+
+  print "</div><!-- /.row -->";
+
+?>
+
+
+
+    
+
+     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <div class="list-group">
+            <a href="#" class="list-group-item active">Sigcomm</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+            <a href="#" class="list-group-item">Link</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->
+      </div><!--/row-->
+
+
 
       <hr>
 
