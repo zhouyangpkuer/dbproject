@@ -5,12 +5,12 @@
 
 
 if exists(select 1 from sys.sysforeignkey where role='FK_MESSAGE_TOPICHAVE_TOPIC') then
-    alter table "Message"
+    alter table Message
        delete foreign key FK_MESSAGE_TOPICHAVE_TOPIC
 end if;
 
 if exists(select 1 from sys.sysforeignkey where role='FK_MESSAGE_PUBLISH_USER') then
-    alter table "Message"
+    alter table Message
        delete foreign key FK_MESSAGE_PUBLISH_USER
 end if;
 
@@ -26,7 +26,7 @@ end if;
 
 if exists(select 1 from sys.sysforeignkey where role='FK_FAVORITE_BE FAVORI_USER') then
     alter table favoriteBlock
-       delete foreign key "FK_FAVORITE_BE FAVORI_USER"
+       delete foreign key FK_FAVORITE_BE FAVORI_USER
 end if;
 
 if exists(select 1 from sys.sysforeignkey where role='FK_FAVORITE_FAVORITE2_BLOCK') then
@@ -36,7 +36,7 @@ end if;
 
 if exists(select 1 from sys.sysforeignkey where role='FK_FAVORITE_BE FAVORI_USER') then
     alter table favoriteTopic
-       delete foreign key "FK_FAVORITE_BE FAVORI_USER"
+       delete foreign key FK_FAVORITE_BE FAVORI_USER
 end if;
 
 if exists(select 1 from sys.sysforeignkey where role='FK_FAVORITE_FAVORITE_TOPIC') then
@@ -48,13 +48,13 @@ drop index if exists Block.Block_PK;
 
 drop table if exists Block;
 
-drop index if exists "Message".Topichave_FK;
+drop index if exists Message.Topichave_FK;
 
-drop index if exists "Message".publish_FK;
+drop index if exists Message.publish_FK;
 
-drop index if exists "Message".Message_PK;
+drop index if exists Message.Message_PK;
 
-drop table if exists "Message";
+drop table if exists Message;
 
 drop index if exists Topic.Blockhave_FK;
 
@@ -64,13 +64,13 @@ drop index if exists Topic.Topic_PK;
 
 drop table if exists Topic;
 
-drop index if exists "User".User_PK;
+drop index if exists User.User_PK;
 
-drop table if exists "User";
+drop table if exists User;
 
 drop index if exists favoriteBlock.favorite2_FK;
 
-drop index if exists favoriteBlock."be favorited2_FK";
+drop index if exists favoriteBlock.be favorited2_FK;
 
 drop index if exists favoriteBlock.favoriteBlock_PK;
 
@@ -78,7 +78,7 @@ drop table if exists favoriteBlock;
 
 drop index if exists favoriteTopic.favorite_FK;
 
-drop index if exists favoriteTopic."be favorited_FK";
+drop index if exists favoriteTopic.be favorited_FK;
 
 drop index if exists favoriteTopic.favoriteTopic_PK;
 
@@ -102,9 +102,9 @@ BlockId ASC
 );
 
 /*==============================================================*/
-/* Table: "Message"                                             */
+/* Table: Message                                             */
 /*==============================================================*/
-create table "Message" 
+create table Message 
 (
    MsgId                integer                        not null,
    TopicId              integer                        null,
@@ -119,21 +119,21 @@ create table "Message"
 /*==============================================================*/
 /* Index: Message_PK                                            */
 /*==============================================================*/
-create unique index Message_PK on "Message" (
+create unique index Message_PK on Message (
 MsgId ASC
 );
 
 /*==============================================================*/
 /* Index: publish_FK                                            */
 /*==============================================================*/
-create index publish_FK on "Message" (
+create index publish_FK on Message (
 UserId ASC
 );
 
 /*==============================================================*/
 /* Index: Topichave_FK                                          */
 /*==============================================================*/
-create index Topichave_FK on "Message" (
+create index Topichave_FK on Message (
 TopicId ASC
 );
 
@@ -173,9 +173,9 @@ BlockId ASC
 );
 
 /*==============================================================*/
-/* Table: "User"                                                */
+/* Table: User                                                */
 /*==============================================================*/
-create table "User" 
+create table User 
 (
    UserId               integer                        not null,
    UserName             varchar(20)                    not null,
@@ -187,7 +187,7 @@ create table "User"
 /*==============================================================*/
 /* Index: User_PK                                               */
 /*==============================================================*/
-create unique index User_PK on "User" (
+create unique index User_PK on User (
 UserId ASC
 );
 
@@ -210,9 +210,9 @@ BlockId ASC
 );
 
 /*==============================================================*/
-/* Index: "be favorited2_FK"                                    */
+/* Index: be favorited2_FK                                    */
 /*==============================================================*/
-create index "be favorited2_FK" on favoriteBlock (
+create index be favorited2_FK on favoriteBlock (
 UserId ASC
 );
 
@@ -242,9 +242,9 @@ TopicId ASC
 );
 
 /*==============================================================*/
-/* Index: "be favorited_FK"                                     */
+/* Index: be favorited_FK                                     */
 /*==============================================================*/
-create index "be favorited_FK" on favoriteTopic (
+create index be favorited_FK on favoriteTopic (
 UserId ASC
 );
 
@@ -255,15 +255,15 @@ create index favorite_FK on favoriteTopic (
 TopicId ASC
 );
 
-alter table "Message"
+alter table Message
    add constraint FK_MESSAGE_TOPICHAVE_TOPIC foreign key (TopicId)
       references Topic (TopicId)
       on update restrict
       on delete restrict;
 
-alter table "Message"
+alter table Message
    add constraint FK_MESSAGE_PUBLISH_USER foreign key (UserId)
-      references "User" (UserId)
+      references User (UserId)
       on update restrict
       on delete restrict;
 
@@ -275,13 +275,13 @@ alter table Topic
 
 alter table Topic
    add constraint FK_TOPIC_CREATE_USER foreign key (UserId)
-      references "User" (UserId)
+      references User (UserId)
       on update restrict
       on delete restrict;
 
 alter table favoriteBlock
-   add constraint "FK_FAVORITE_BE FAVORI_USER" foreign key (UserId)
-      references "User" (UserId)
+   add constraint FK_FAVORITE_BE FAVORI_USER foreign key (UserId)
+      references User (UserId)
       on update restrict
       on delete restrict;
 
@@ -292,8 +292,8 @@ alter table favoriteBlock
       on delete restrict;
 
 alter table favoriteTopic
-   add constraint "FK_FAVORITE_BE FAVORI_USER" foreign key (UserId)
-      references "User" (UserId)
+   add constraint FK_FAVORITE_BE FAVORI_USER foreign key (UserId)
+      references User (UserId)
       on update restrict
       on delete restrict;
 
