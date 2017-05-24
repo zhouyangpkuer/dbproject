@@ -146,7 +146,7 @@
 
         $datas_topic = mysqli_fetch_array($result_id);
         
-        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$Username;
+        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$_GET["user_id"];
         
         print "<div class='col-lg-4'><h2>";
           print $datas_topic["TopicTitle"];

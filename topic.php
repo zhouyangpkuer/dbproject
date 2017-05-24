@@ -100,14 +100,6 @@
 
       <div class="jumbotron">
             <h1>
-              <?php
-            print 'Topic: '.$_GET['topic_id'].' !';
-            ?>
-            </h1>
-            <p>Here are all the messages of this topic!</p>
-      </div>
-
-  <div class="row">
 
 
 
@@ -121,6 +113,17 @@
 
   $con = mysqli_connect($Hostname, $User, $PasswordP) or die("Cant connect into database");
   mysqli_select_db($con, $DBName) or die("Cant connect into database");
+
+  $SQL = "SELECT * FROM Topic WHERE TopicId = '".$topic_id."'";
+  $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+  $datas_topic = mysqli_fetch_array($result_id);
+
+  print "'Topic: '.$datas_topic['TopicTitle'].' !'";
+   print "</h1>
+            <p>Here are all the messages of this topic!</p>
+      </div>
+  <div class='row'>";
+
 
 
   $SQL = "SELECT * FROM Message WHERE TopicId = '".$topic_id."' order by FLoorNumber asc;";
