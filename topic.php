@@ -91,10 +91,10 @@
       <div class="jumbotron">
             <h1>
               <?php
-            print 'Blcok: '.$_GET['block_name'].'!';
+            print 'Topic: '.$_GET['topic_id'].'!';
             ?>
             </h1>
-            <p>Here are all the topics of this block! You can click on each topic, and then you will get more details about this topic!</p>
+            <p>Here are all the messages of this topic!</p>
       </div>
 
   <div class="row">
@@ -128,13 +128,17 @@
         $datas_topic = mysqli_fetch_array($result_id);
         
         
-        print "<div class='col-lg-4'>";
+        print "<div class='jumbotron'>";
+    
+    print "<h3> floor ";
+          print $datas_topic["FLoorNumber"];
+          print "says: </h3>";
 
         print "<p>";
           print $datas_topic["MsgContent"];
           print "
           </p>  
-        </div><!-- /.col-lg-4 -->";
+        </div><!-- /.jumbotron -->";
       }
 
   print "</div><!-- /.row -->";
