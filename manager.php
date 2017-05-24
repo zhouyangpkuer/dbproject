@@ -172,16 +172,16 @@
 
 <div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
           <div class='list-group'>
-            <a href='http://www.sigcomm.org/' class='list-group-itemhref'>Sigcomm</a>
-            <a href='https://sigmod.org/' class='list-group-itemhref'>Sigmod</a>
-            <a href='https://www.usenix.org/conference/nsdi17' class='list-group-itemhref'>NSDI</a>
-            <a href='http://www.vldb.org/2017/' class='list-group-itemhref'>VLDB</a>
-            <a href='http://www.kdd.org/' class='list-group-itemhref'>Sigkdd</a>
-            <a href='http://cvpr2017.thecvf.com/' class='list-group-itemhref'>CVPR</a>
-            <a href='https://www.usenix.org/conference/osdi16' class='list-group-itemhref'>OSDI</a>
-            <a href='https://www.sigmetrics.org/sigmetrics2017/' class='list-group-itemhref'>Sigmetrics</a>
-            <a href='https://www.sigops.org/sosp/sosp17/' class='list-group-itemhref'>SOSP</a>
-            <a href='https://2017.icml.cc/' class='list-group-itemhref'>ICML</a>
+            <a href='http://www.sigcomm.org/' class='list-group-item'>Sigcomm</a>
+            <a href='https://sigmod.org/' class='list-group-item'>Sigmod</a>
+            <a href='https://www.usenix.org/conference/nsdi17' class='list-group-item'>NSDI</a>
+            <a href='http://www.vldb.org/2017/' class='list-group-item'>VLDB</a>
+            <a href='http://www.kdd.org/' class='list-group-item'>Sigkdd</a>
+            <a href='http://cvpr2017.thecvf.com/' class='list-group-item'>CVPR</a>
+            <a href='https://www.usenix.org/conference/osdi16' class='list-group-item'>OSDI</a>
+            <a href='https://www.sigmetrics.org/sigmetrics2017/' class='list-group-item'>Sigmetrics</a>
+            <a href='https://www.sigops.org/sosp/sosp17/' class='list-group-item'>SOSP</a>
+            <a href='https://2017.icml.cc/' class='list-group-item'>ICML</a>
 
             
           </div>
@@ -280,14 +280,12 @@
 
 <div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
           <div class='list-group'>
-            <a href='https://scholar.google.com/' class='list-group-itemhref'>Google Scholar</a>
-            <a href='https://www.researchgate.net/' class='list-group-itemhref'>Research Gate</a>
-            <a href='https://arxiv.org/' class='list-group-itemhref'>arXiv</a>
+            <a href='https://scholar.google.com/' class='list-group-item'>Google Scholar</a>
+            <a href='https://www.researchgate.net/' class='list-group-item'>Research Gate</a>
+            <a href='https://arxiv.org/' class='list-group-item'>arXiv</a>
           </div>
-        </div><!--/.sidebar-offcanvas-->
+</div><!--/.sidebar-offcanvas-->
   </div>
-
-    
 
 
 
