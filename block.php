@@ -102,6 +102,13 @@
             print 'Blcok: '.$_GET['block_name'].' !';
             ?>
             </h1>
+
+            <p>
+            <?php
+            print "<a class='btn btn-lg btn-success' href='"."./user_block.php"."?block_name=".$_GET['block_name']."&user_id=".$_GET['user_id']."' role='button'>Get started today</a>";
+            ?>
+            </p>
+
             <p>Here are all the topics of this block! You can click on each topic, and then you will get more details about this topic!</p>
       </div>
 

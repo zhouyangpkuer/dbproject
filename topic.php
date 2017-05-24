@@ -95,7 +95,7 @@
 
 
       <div class="jumbotron">
-            <h1>
+            <h3>
 
 
 
@@ -117,7 +117,7 @@
   $datas_topic = mysqli_fetch_array($result_id);
 
   print "Topic: ".$datas_topic['TopicTitle']." !";
-  print "</h1>
+  print "</h3>
             <p>Here are all the messages of this topic!</p>
       </div>
   <div class='row'>";
