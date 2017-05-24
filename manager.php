@@ -136,6 +136,21 @@
           print "' role='button'>View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->";
       }
+     
+     print "<div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
+          <div class='list-group'>
+            <a href='#' class='list-group-item active'>Sigcomm</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->"; 
 
   print "</div><!-- /.row -->";
 
@@ -207,6 +222,21 @@
           print "' role='button'>View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->";
       }
+  
+  print "<div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
+          <div class='list-group'>
+            <a href='#' class='list-group-item active'>Sigcomm</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='list-group-item'>Link</a>
+          </div>
+        </div><!--/.sidebar-offcanvas-->"; 
 
   print "</div><!-- /.row -->";
 
@@ -216,20 +246,6 @@
 
     
 
-     <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
-          <div class="list-group">
-            <a href="#" class="list-group-item active">Sigcomm</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-            <a href="#" class="list-group-item">Link</a>
-          </div>
-        </div><!--/.sidebar-offcanvas-->
 
 
 
