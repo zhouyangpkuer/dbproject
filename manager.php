@@ -119,7 +119,6 @@
   $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
   $datas = mysqli_fetch_array($result_id);
   $UserId = $datas["UserId"];
-  // mysqli_close();
 
 
   $SQL = "SELECT * FROM favoriteBlock WHERE UserId = '".$UserId."';";
@@ -162,6 +161,7 @@
       }
 
   print "</div><!-- /.row -->";
+  mysqli_close();
 
 ?>
 
@@ -230,24 +230,26 @@
   $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
   $datas = mysqli_fetch_array($result_id);
   $UserId = $datas["UserId"];
-  // mysqli_close();
 
 
   $SQL = "SELECT * FROM favoriteTopic WHERE UserId = '".$UserId."';";
   $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $datas = mysqli_fetch_array($result_id);
-  $TopicId = $datas["TopicId"];
-
-  $SQL = "SELECT * FROM Topic WHERE TopicId = '".$TopicId."';";
-  $result_id_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $total_num_topic = mysqli_num_rows($result_id_topic);
+  $total_num_topic = mysqli_num_rows($result_id);
 
 
+  
   print "<div class='row'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_topic; $i++)
       {
+        $datas = mysqli_fetch_array($result_id);
+        $TopicId = $datas["TopicId"];
+
+        $SQL = "SELECT * FROM Topic WHERE TopicId = '".$TopicId."';";
+        $result_id_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+
+
         $datas_topic = mysqli_fetch_array($result_id_topic);
         
         $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"];
@@ -267,6 +269,7 @@
 
   print "</div><!-- /.row -->";
 
+  mysqli_close();
 ?>
   </div>
 
