@@ -44,7 +44,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		$Total = mysqli_num_rows($Result);
 		if ($Total == 0)
 		{
-			$insert = "INSERT INTO User(UserName, Password) values('".$Username."', '".md5($Password)."')";
+			$insert = "INSERT INTO User(Password, UserName) values('".md5($Password)."', '".$Username."')";
 			$sql= mysqli_query($con, $insert);
 			$Succ="Congratulations! You have registered successfully!";
 			// header("Location:./manager.php");
