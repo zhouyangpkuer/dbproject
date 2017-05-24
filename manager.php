@@ -66,6 +66,10 @@
 
   <div class="container">
 
+
+
+
+
   <div class="row row-offcanvas row-offcanvas-right">
 
   <div class="col-xs-12 col-sm-9">
@@ -74,7 +78,6 @@
             <h1>Your favorate blocks!</h1>
             <p>You can click on each block, and then you will get more details about this block!</p>
       </div>
-  </div>
   </div>
   </div>
 
@@ -107,7 +110,7 @@
   $total_num_block = mysqli_num_rows($result_id_block);
 
 
-  print "  <div class='container'> <div class='row'>";
+  print "<div class='row'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_block; $i++)
@@ -140,8 +143,6 @@
 
 
 
-  <div class="container">
-
   <div class="row row-offcanvas row-offcanvas-right">
 
   <div class="col-xs-12 col-sm-9">
@@ -150,7 +151,6 @@
             <h1>Your favorate topics!</h1>
             <p>You can click on each topic, and then you will get more details about this topic!</p>
       </div>
-  </div>
   </div>
   </div>
 
@@ -186,7 +186,7 @@
   $total_num_topic = mysqli_num_rows($result_id_topic);
 
 
-  print "  <div class='container'> <div class='row'>";
+  print "<div class='row'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_topic; $i++)
@@ -230,7 +230,6 @@
             <a href="#" class="list-group-item">Link</a>
           </div>
         </div><!--/.sidebar-offcanvas-->
-      </div><!--/row-->
 
 
 
