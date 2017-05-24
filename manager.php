@@ -43,11 +43,20 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </button>
+         <a class='navbar-brand' href='#'>
+          Manager
+         </a>
+
+         <a class='navbar-brand' href='./index.html'>
+          PaperHeaven
+         </a>
+
           <a class='navbar-brand' href='#'>
-			<?php
-			print 'Welcome: '.$_GET['user_id'].'!';
-			?>
-	       </a>
+            <?php
+            print 'Welcome: '.$_GET['user_id'].' !';
+            ?>
+         </a>
+         
         </div>
         <div id='navbar' class='navbar-collapse collapse'>
           <form class='navbar-form navbar-right'>
@@ -139,7 +148,7 @@
 
 
         $datas_block = mysqli_fetch_array($result_id_block);
-        $block_url = "./block.php?block_name=".$datas_block["BlockName"];
+        $block_url = "./block.php?block_name=".$datas_block["BlockName"]."&user_id=".$Username;
         
         print "<div class='col-xs-6 col-lg-4'>
           <a href='".$block_url; 
@@ -252,7 +261,7 @@
 
         $datas_topic = mysqli_fetch_array($result_id_topic);
         
-        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"];
+        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$Username;
         
         print "<div class='col-xs-6 col-lg-4'><h2>";
           print $datas_topic["TopicTitle"];

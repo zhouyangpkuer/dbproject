@@ -45,9 +45,22 @@
           </button>
           <a class='navbar-brand' href='#'>
 			<?php
-			print 'Topic: '.$_GET['topic_id'].'!';
+			print 'Topic: '.$_GET['topic_id'].' !';
 			?>
 	       </a>
+
+         <a class='navbar-brand' href='./index.html'>
+          PaperHeaven
+         </a>
+         
+        <?php  
+        print   
+         "<a class='navbar-brand' href='./manager.php?user_id=";
+         print $_GET["user_id"]
+         print "'>
+          Back to Manager
+         </a>"
+          ?>
         </div>
         <div id='navbar' class='navbar-collapse collapse'>
           <form class='navbar-form navbar-right'>
@@ -91,7 +104,7 @@
       <div class="jumbotron">
             <h1>
               <?php
-            print 'Topic: '.$_GET['topic_id'].'!';
+            print 'Topic: '.$_GET['topic_id'].' !';
             ?>
             </h1>
             <p>Here are all the messages of this topic!</p>
@@ -130,9 +143,9 @@
         
         print "<div class='jumbotron'>";
     
-    print "<h3> floor ";
+    print "<h3> Floor ";
           print $datas_topic["FLoorNumber"];
-          print "says: </h3>";
+          print " said: </h3>";
 
         print "<p>";
           print $datas_topic["MsgContent"];

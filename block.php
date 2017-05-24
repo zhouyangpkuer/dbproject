@@ -44,10 +44,24 @@
             <span class='icon-bar'></span>
           </button>
           <a class='navbar-brand' href='#'>
-			<?php
-			print 'Blcok: '.$_GET['block_name'].'!';
-			?>
-	       </a>
+      <?php
+      print 'Blcok: '.$_GET['block_name'].' !';
+      ?>
+         </a>
+
+         <a class='navbar-brand' href='./index.html'>
+          PaperHeaven
+         </a>
+         
+        <?php  
+        print   
+         "<a class='navbar-brand' href='./manager.php?user_id=";
+         print $_GET["user_id"]
+         print "'>
+          Back to Manager
+         </a>"
+          ?>
+
         </div>
         <div id='navbar' class='navbar-collapse collapse'>
           <form class='navbar-form navbar-right'>
@@ -91,7 +105,7 @@
       <div class="jumbotron">
             <h1>
               <?php
-            print 'Blcok: '.$_GET['block_name'].'!';
+            print 'Blcok: '.$_GET['block_name'].' !';
             ?>
             </h1>
             <p>Here are all the topics of this block! You can click on each topic, and then you will get more details about this topic!</p>
@@ -138,7 +152,7 @@
 
         $datas_topic = mysqli_fetch_array($result_id);
         
-        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"];
+        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$Username;
         
         print "<div class='col-lg-4'><h2>";
           print $datas_topic["TopicTitle"];
