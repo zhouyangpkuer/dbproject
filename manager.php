@@ -63,6 +63,21 @@
       </div>
     </nav>
 
+
+
+
+    <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class='jumbotron'>
+      <div class='container'>
+        <h1>Hello, world!</h1>
+        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
+        <p><a class='btn btn-primary btn-lg' href='#' role='button'>Learn more &raquo;</a></p>
+      </div>
+    </div>
+
+
+
+
 <?php
 	$Username = $_GET["user_id"];
 	
@@ -88,47 +103,30 @@
 
 	$SQL = "SELECT * FROM Block WHERE BlockId = '".$BlockId."';";
 	$result_id_block = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-	$datas_block = mysqli_fetch_array($result_id_block);
+  $total_num_block = mysqli_num_rows($result_id_block);
 
 
-  print "  <div class='container marketing'>
+  print "  <div class='container marketing'> <div class='row'>"
 
-      <!-- Three columns of text below the carousel -->
-      <div class='row'>
+      for($i = 0; $i < $total_num_block; $i++)
+      {
+        $datas_block = mysqli_fetch_array($result_id_block);
+
+        print "
         <div class='col-lg-4'>
           <img class='img-circle' src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==' alt='Generic placeholder image' width='140' height='140'>
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p><a class='btn btn-default' href='#' role='button'>View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class='col-lg-4'>
-          <img class='img-circle' src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==' alt='Generic placeholder image' width='140' height='140'>
-          <h2>Heading</h2>
-          <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</p>
-          <p><a class='btn btn-default' href='#' role='button'>View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-        <div class='col-lg-4'>
-          <img class='img-circle' src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==' alt='Generic placeholder image' width='140' height='140'>
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class='btn btn-default' href='#' role='button'>View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->
-      </div><!-- /.row -->";
+          <h2>";
+          print $datas_block["BlockName"];
+        
+          print "</h2>
+          <a class='btn btn-default' href='#' role='button'>View details &raquo;</a></p>
+        </div><!-- /.col-lg-4 -->";
+      }
 
-
+  print "</div><!-- /.row -->";
 ?>
 
 
-
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class='jumbotron'>
-      <div class='container'>
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class='btn btn-primary btn-lg' href='#' role='button'>Learn more &raquo;</a></p>
-      </div>
-    </div>
 
     <div class='container'>
       <!-- Example row of columns -->
