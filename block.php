@@ -49,10 +49,6 @@
       ?>
          </a>
 
-         <a class='navbar-brand' href='./index.html'>
-          PaperHeaven
-         </a>
-
         <?php  
         print   
          "<a class='navbar-brand' href='./manager.php?user_id=";
@@ -63,17 +59,15 @@
           ?>
 
         </div>
-        <div id='navbar' class='navbar-collapse collapse'>
-          <form class='navbar-form navbar-right'>
-            <div class='form-group'>
-              <input type='text' placeholder='Username' class='form-control'>
-            </div>
-            <div class='form-group'>
-              <input type='password' placeholder='Password' class='form-control'>
-            </div>
-            <button type='submit' class='btn btn-success'>Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class='navbar-brand' href='./index.html'>
+          PaperHeaven
+          </a> 
+
+        </li>
+      </ul>
+      
       </div>
     </nav>
 
