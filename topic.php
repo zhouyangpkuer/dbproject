@@ -52,14 +52,14 @@
          <a class='navbar-brand' href='./index.html'>
           PaperHeaven
          </a>
-         
+
         <?php  
         print   
          "<a class='navbar-brand' href='./manager.php?user_id=";
-         print $_GET["user_id"]
+         print $_GET["user_id"];
          print "'>
           Back to Manager
-         </a>"
+         </a>";
           ?>
         </div>
         <div id='navbar' class='navbar-collapse collapse'>
