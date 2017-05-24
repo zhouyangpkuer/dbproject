@@ -66,16 +66,11 @@
 
 
 
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class='jumbotron'>
-      <div class='container'>
-        <h1>Hello, world!</h1>
-        <p>This is a template for a simple marketing or informational website. It includes a large callout called a jumbotron and three supporting pieces of content. Use it as a starting point to create something more unique.</p>
-        <p><a class='btn btn-primary btn-lg' href='#' role='button'>Learn more &raquo;</a></p>
+
+      <div class="jumbotron">
+            <h1>Your favorate block!</h1>
+            <p>You can click on each block, and then you will get more details about this block!</p>
       </div>
-    </div>
-
-
 
 
 <?php
@@ -107,19 +102,21 @@
 
 
   print "  <div class='container marketing'> <div class='row'>";
-  print $total_num_block; 
+  // print $total_num_block; 
 
       for($i = 0; $i < $total_num_block; $i++)
       {
         $datas_block = mysqli_fetch_array($result_id_block);
-
-        print "
-        <div class='col-lg-4'>
-          <img class='img-circle' src='";
+        $block_url = "./block.php?block_name=".$datas_block["BlockName"];
+        
+        print "<div class='col-lg-4'>
+          <a href='".$block_url; 
+          print "'> <img class='img-circle' src='";
 
           print "./pic/".$datas_block["BlockName"].".jpg"; 
 
-          print "' alt='Generic placeholder image' width='140' height='140'> <h2>";
+          print "' alt='Generic placeholder image' width='140' height='140'></a> 
+          <h2>";
           print $datas_block["BlockName"];
         
           print "</h2>
