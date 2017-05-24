@@ -108,14 +108,17 @@
 
   print "  <div class='container marketing'> <div class='row'>";
   print $total_num_block; 
+
       for($i = 0; $i < $total_num_block; $i++)
       {
         $datas_block = mysqli_fetch_array($result_id_block);
 
         print "
         <div class='col-lg-4'>
-          <img class='img-circle' src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==' alt='Generic placeholder image' width='140' height='140'>
-          <h2>";
+          <img class='img-circle' src='"
+          print $datas_block["BlockName"]."jpg"; 
+ 
+          print "' alt='Generic placeholder image' width='140' height='140'> <h2>";
           print $datas_block["BlockName"];
         
           print "</h2>
