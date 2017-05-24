@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <title>Gongzhan</title>
     <link rel="stylesheet" type="text/css" href="css/log.css" />
-</head>
+</head> 
 
 <?php
 $Username = "";

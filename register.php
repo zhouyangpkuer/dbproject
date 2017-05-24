@@ -8,7 +8,7 @@
     <title>PaperHeaven</title>
     <link rel="stylesheet" type="text/css" href="css/log.css" />
 </head>
-<body>
+<body> 
 
 <?php
 
