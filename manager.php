@@ -124,19 +124,21 @@
 
   $SQL = "SELECT * FROM favoriteBlock WHERE UserId = '".$UserId."';";
   $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $datas = mysqli_fetch_array($result_id);
-  $BlockId = $datas["BlockId"];
-
-  $SQL = "SELECT * FROM Block WHERE BlockId = '".$BlockId."';";
-  $result_id_block = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $total_num_block = mysqli_num_rows($result_id_block);
-
+  $total_num_block = mysqli_num_rows($result_id);
+  
 
   print "<div class='row'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_block; $i++)
       {
+        $datas = mysqli_fetch_array($result_id);
+        $BlockId = $datas["BlockId"];
+
+        $SQL = "SELECT * FROM Block WHERE BlockId = '".$BlockId."';";
+        $result_id_block = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+
+
         $datas_block = mysqli_fetch_array($result_id_block);
         $block_url = "./block.php?block_name=".$datas_block["BlockName"];
         
