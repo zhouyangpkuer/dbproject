@@ -106,7 +106,7 @@
   $total_num_block = mysqli_num_rows($result_id_block);
 
 
-  print "  <div class='container marketing'> <div class='row'>"
+  print "  <div class='container marketing'> <div class='row'>";
 
       for($i = 0; $i < $total_num_block; $i++)
       {
