@@ -88,24 +88,21 @@
 
 
 
-
-
-
-
-
-
-
-<div class="row row-offcanvas row-offcanvas-right">
-
-  <div class="col-xs-12 col-sm-9">
-
       <div class="jumbotron">
-            <h1>Your favorate blocks!</h1>
-            <p>You can click on each block, and then you will get more details about this block!</p>
+            <h1>
+              <?php
+            print 'Blcok: '.$_GET['block_name'].'!';
+            ?>
+            </h1>
+            <p>Here are all the topics of this block! You can click on each topic, and then you will get more details about this topic!</p>
       </div>
 
+  <div class="row">
+
+
+
 <?php
-  $BlockName = $_GET["block_name"];
+  $block_name = $_GET["block_name"];
   
   $Hostname = "localhost";
   $DBName = "forum";
@@ -115,138 +112,35 @@
   $con = mysqli_connect($Hostname, $User, $PasswordP) or die("Cant connect into database");
   mysqli_select_db($con, $DBName) or die("Cant connect into database");
 
-
-
-  $SQL = "SELECT * FROM Block WHERE BlockName = '".$BlockName."';";
+  $SQL = "SELECT * FROM Block WHERE BlockName = '".$block_name."';";
   $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
   $datas = mysqli_fetch_array($result_id);
   $BlockId = $datas["BlockId"];
 
 
-  $SQL = "SELECT * FROM Block WHERE BlockName = '".$BlockId."';";
-  $result_id_block = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $total_num_block = mysqli_num_rows($result_id_block);
+  $SQL = "SELECT * FROM Topic WHERE BlockId = '".$BlockId."';";
+  $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+  $total_num_topic = mysqli_num_rows($result_id);
 
 
-  print "<div class='row'>";
-  // print $total_num_block; 
-
-      for($i = 0; $i < $total_num_block; $i++)
-      {
-        $datas_block = mysqli_fetch_array($result_id_block);
-        $block_url = "./block.php?block_name=".$datas_block["BlockName"];
-        
-        print "<div class='col-xs-6 col-lg-4'>
-          <a href='".$block_url; 
-          print "'> <img class='img-circle' src='";
-
-          print "./pic/".$datas_block["BlockName"].".jpg"; 
-
-          print "' alt='Generic placeholder image' width='140' height='140'></a> 
-          <h2>";
-          print $datas_block["BlockName"];
-        
-          print "</h2>
-          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-          <p>
-          <a class='btn btn-default' href='";
-          print $block_url; 
-          print "' role='button'>View details &raquo;</a></p>
-        </div><!-- /.col-lg-4 -->";
-      }
-
-  print "</div><!-- /.row -->";
-
-?>
-
-  </div>
-
-<div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
-          <div class='list-group'>
-            <a href='#' class='list-group-item active'>Sigcomm</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-          </div>
-        </div><!--/.sidebar-offcanvas-->
-  </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <br/><br/><br/><br/><br/><br/><br/><br/>
-          <hr/>
-
-
-
-
-
-
-  <div class="row row-offcanvas row-offcanvas-right">
-
-  <div class="col-xs-12 col-sm-9">
-
-      <div class="jumbotron">
-            <h1>Your favorate topics!</h1>
-            <p>You can click on each topic, and then you will get more details about this topic!</p>
-      </div>
-
-
-<?php
-  $Username = $_GET["user_id"];
   
-  $Hostname = "localhost";
-  $DBName = "forum";
-  $User = "root";
-  $PasswordP = "";
-
-  $con = mysqli_connect($Hostname, $User, $PasswordP) or die("Cant connect into database");
-  mysqli_select_db($con, $DBName) or die("Cant connect into database");
-
-  $SQL = "SELECT * FROM User WHERE UserName = '".$Username."';";
-  $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $datas = mysqli_fetch_array($result_id);
-  $UserId = $datas["UserId"];
-  // mysqli_close();
-
-
-  $SQL = "SELECT * FROM favoriteTopic WHERE UserId = '".$UserId."';";
-  $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $datas = mysqli_fetch_array($result_id);
-  $TopicId = $datas["TopicId"];
-
-  $SQL = "SELECT * FROM Topic WHERE TopicId = '".$TopicId."';";
-  $result_id_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $total_num_topic = mysqli_num_rows($result_id_topic);
-
-
   print "<div class='row'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_topic; $i++)
       {
+        $datas = mysqli_fetch_array($result_id);
+        $TopicId = $datas["TopicId"];
+
+        $SQL = "SELECT * FROM Topic WHERE TopicId = '".$TopicId."';";
+        $result_id_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+
+
         $datas_topic = mysqli_fetch_array($result_id_topic);
         
         $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"];
         
-        print "<div class='col-xs-6 col-lg-4'><h2>";
+        print "<div class='col-lg-4'><h2>";
           print $datas_topic["TopicTitle"];
           print "</h2><p>";
           print $datas_topic["TopicContent"];
@@ -261,23 +155,8 @@
 
   print "</div><!-- /.row -->";
 
+  mysqli_close();
 ?>
-  </div>
-
-<div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
-          <div class='list-group'>
-            <a href='#' class='list-group-item active'>Sigcomm</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-          </div>
-        </div><!--/.sidebar-offcanvas-->
   </div>
 
     
