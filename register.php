@@ -39,12 +39,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	}
 	else
 	{
-		$sql = "SELECT * FROM User WHERE UserName = '".$Username."'";
+		$sql = "SELECT * FROM User WHERE UserName = '".$Username."';";
 		$Result = mysqli_query($con, $sql) or die("DB Error");
 		$Total = mysqli_num_rows($Result);
 		if ($Total == 0)
 		{
-			$insert = "INSERT INTO User(UserId, Password, UserName) values( NULL, '".md5($Password)."', '".$Username."')";
+			$insert = "INSERT INTO User(UserId, Password, UserName) values( NULL, '".md5($Password)."', '".$Username."');";
 			$sql= mysqli_query($con, $insert);
 			$Succ="Congratulations! You have registered successfully!";
 			// header("Location:./manager.php");
