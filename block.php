@@ -129,14 +129,14 @@
 
       for($i = 0; $i < $total_num_topic; $i++)
       {
-        $datas = mysqli_fetch_array($result_id);
-        $TopicId = $datas["TopicId"];
+        // $datas = mysqli_fetch_array($result_id);
+        // $TopicId = $datas["TopicId"];
 
-        $SQL = "SELECT * FROM Topic WHERE TopicId = '".$TopicId."';";
-        $result_id_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+        // $SQL = "SELECT * FROM Topic WHERE TopicId = '".$TopicId."';";
+        // $result_id_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
 
 
-        $datas_topic = mysqli_fetch_array($result_id_topic);
+        $datas_topic = mysqli_fetch_array($result_id);
         
         $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"];
         
