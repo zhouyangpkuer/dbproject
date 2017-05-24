@@ -64,13 +64,19 @@
     </nav>
 
 
+  <div class="container">
 
+  <div class="row row-offcanvas row-offcanvas-right">
 
+  <div class="col-xs-12 col-sm-9">
 
       <div class="jumbotron">
             <h1>Your favorate block!</h1>
             <p>You can click on each block, and then you will get more details about this block!</p>
       </div>
+  </div>
+  </div>
+  </div>
 
 
 <?php
