@@ -32,7 +32,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	if ($total)
 	{
 		$datas = mysqli_fetch_array($result_id);
-		if (!strcmp(md5($Password), $datas["Password"]))
+		if (!strcmp($Password, $datas["Password"]))
 		{
 			$Succ="Login successfully! :)";
 			header("Location:./manager.php?user_id=".$Username);
