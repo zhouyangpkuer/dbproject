@@ -61,8 +61,8 @@ create table Topic
 create table User
 (
    UserId               bigint not null auto_increment,
-   Password             varchar(30) not null,
-   UserName             varchar(20) not null,
+   Password             varchar(1000) not null,
+   UserName             varchar(100) not null,
    primary key (UserId)
 );
 
