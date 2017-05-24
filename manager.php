@@ -106,7 +106,7 @@
             <div class='carousel-caption'>
               <h1>";
 
-			print $datas_block['BlockName']
+			print $datas_block['BlockName'];
 
               print "
               </h1>
