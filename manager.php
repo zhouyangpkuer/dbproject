@@ -79,7 +79,6 @@
             <p>You can click on each block, and then you will get more details about this block!</p>
       </div>
   </div>
-  </div>
 <div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
           <div class='list-group'>
             <a href='#' class='list-group-item active'>Sigcomm</a>
@@ -94,6 +93,7 @@
             <a href='#' class='list-group-item'>Link</a>
           </div>
         </div><!--/.sidebar-offcanvas-->
+      </div>
 
 
 <?php
@@ -166,7 +166,6 @@
             <p>You can click on each topic, and then you will get more details about this topic!</p>
       </div>
   </div>
-  </div>
 
 <div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
           <div class='list-group'>
@@ -182,6 +181,7 @@
             <a href='#' class='list-group-item'>Link</a>
           </div>
         </div><!--/.sidebar-offcanvas-->
+  </div>
 
     
 
