@@ -43,16 +43,12 @@
             <span class='icon-bar'></span>
             <span class='icon-bar'></span>
           </button>
-
           <a class='navbar-brand' href='#'>
-			<?php
-			print 'Topic: '.$_GET['topic_id'].' !';
-			?>
-	       </a>
+			     <?php
+		        	print 'Topic: '.$_GET['topic_id'].' !';
+		      	?>
+	         </a>
 
-         <a class='navbar-brand' href='./index.html'>
-          PaperHeaven
-         </a>
 
         <?php  
         print   
@@ -63,15 +59,17 @@
          </a>";
           ?>
         </div>
-        
-          <nav>
-                <ul class="nav masthead-nav">
-                  <li class="active"><a href="#">Home</a></li>
-                  <li><a href="#">Features</a></li>
-                  <li><a href="#">Contact</a></li>
-                </ul>
-         </nav>
-         
+      
+
+      <ul class="nav navbar-nav navbar-right">
+        <li>
+          <a class='navbar-brand' href='./index.html'>
+          PaperHeaven
+          </a> 
+
+        </li>
+      </ul>
+      
       </div>
     </nav>
 
