@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 			$insert = "INSERT INTO Users(user_name, password) values('" . $Username . "', '" . md5($Password) . "')";
 			$sql= mysqli_query($con, $insert);
 			$Succ="Congratulations! You have registered successfully!";
-			header("Location:http://pkucareer.com/manager.php");
+			header("Location:./forum.php");
 		}
 		else
 		{
