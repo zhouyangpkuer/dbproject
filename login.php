@@ -5,7 +5,7 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
     <meta charset="utf-8">
-    <title>Gongzhan</title>
+    <title>PaperHeaven</title>
     <link rel="stylesheet" type="text/css" href="css/log.css" />
 </head> 
 
