@@ -63,7 +63,28 @@
       </div>
     </nav>
 
+<?php
+	$Username = $_GET["user_id"];
+	
+	$Hostname = "localhost";
+	$DBName = "forum";
+	$User = "root";
+	$PasswordP = "";
 
+	$con = mysqli_connect($Hostname, $User, $PasswordP) or die("Cant connect into database");
+	mysqli_select_db($con, $DBName) or die("Cant connect into database");
+
+	$SQL = "SELECT * FROM User WHERE UserName = '".$Username."';";
+	$result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+	$datas = mysqli_fetch_array($result_id);
+	$UserId = $datas["UserId"];
+	// mysqli_close();
+
+
+	$SQL = "SELECT * FROM favoriteBlock WHERE UserId = '".$UserId."';";
+	$result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+}
+?>
 
  <!-- Carousel
     ================================================== -->
@@ -79,8 +100,29 @@
           <img class="first-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="First slide">
           <div class="container">
             <div class="carousel-caption">
-              <h1>Example headline.</h1>
-              <p>Note: If you're viewing this page via a <code>file://</code> URL, the "next" and "previous" Glyphicon buttons on the left and right might not load/display properly due to web browser security rules.</p>
+              
+
+              <h1>Example headline.
+
+
+				<?php
+					$datas = mysqli_fetch_array($result_id);
+					$BlockId = $datas["BlockId"];
+
+					$SQL = "SELECT * FROM Block WHERE BlockId = '".$BlockId."';";
+					$result_id_block = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+					$datas_block = mysqli_fetch_array($result_id_block);
+
+					print $datas_block["BlockName"]
+				}
+				?>
+              </h1>
+              <p>
+              	
+              	
+              </p>
+              
+
               <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p>
             </div>
           </div>
