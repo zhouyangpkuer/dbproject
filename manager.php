@@ -104,11 +104,11 @@
           <img class='first-slide' src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==' alt='First slide'>
           <div class='container'>
             <div class='carousel-caption'>
-              <h1>" 
-              
+              <h1>";
+
 			// print $datas_block['BlockName']
 
-			print "
+              print "
               </h1>
               <p>
               	
@@ -148,7 +148,7 @@
         <span class='glyphicon glyphicon-chevron-right' aria-hidden='true'></span>
         <span class='sr-only'>Next</span>
       </a>
-    </div><!-- /.carousel --> "
+    </div><!-- /.carousel --> ";
 
 ?>
 
