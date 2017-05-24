@@ -16,7 +16,7 @@ $rePassword = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$Username = $_POST["username"];
-        $Password = $_POST["password"];	
+    $Password = $_POST["password"];	
 	
 	$Hostname = "localhost";
 	$DBName = "forum";
@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 	$con = mysqli_connect($Hostname, $User, $PasswordP) or die("Cant connect into database");
 	mysqli_select_db($con, $DBName) or die("Cant connect into database");
 
-	$SQL = "SELECT * FROM User WHERE UserName = '" . $Username . "'";
+	$SQL = "SELECT * FROM User WHERE UserName = '".$Username."'";
 	$result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
 	$total = mysqli_num_rows($result_id);
 	if ($total)
@@ -35,6 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 		if (!strcmp(md5($Password), $datas["Password"]))
 		{
 			$Succ="Login successfully! :)";
+			header("Location:./manager.php?user_id=".$Username);
 		}
 		else
 		{
