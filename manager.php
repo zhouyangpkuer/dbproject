@@ -116,8 +116,8 @@
         print "
         <div class='col-lg-4'>
           <img class='img-circle' src='";
-          
-          print $datas_block["BlockName"]."jpg"; 
+
+          print "./pic".$datas_block["BlockName"]."jpg"; 
 
           print "' alt='Generic placeholder image' width='140' height='140'> <h2>";
           print $datas_block["BlockName"];
