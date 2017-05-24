@@ -172,16 +172,16 @@
 
 <div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
           <div class='list-group'>
-            <a href='#' class='list-group-item active'>Sigcomm</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='http://www.sigcomm.org/'>Sigcomm</a>
+            <a href='#' class='https://sigmod.org/'>Sigmod</a>
+            <a href='#' class='https://www.usenix.org/conference/nsdi17'>NSDI</a>
+            <a href='#' class='http://www.vldb.org/2017/'>VLDB</a>
+            <a href='#' class='http://www.kdd.org/'>Sigkdd</a>
+            <a href='#' class='http://cvpr2017.thecvf.com/'>CVPR</a>
+            <a href='#' class='https://www.usenix.org/conference/osdi16'>OSDI</a>
+            <a href='#' class='https://www.sigmetrics.org/sigmetrics2017/'>Sigmetrics</a>
+            <a href='#' class='https://www.sigops.org/sosp/sosp17/'>SOSP</a>
+            <a href='#' class='https://2017.icml.cc/'>ICML</a>
           </div>
         </div><!--/.sidebar-offcanvas-->
   </div>
@@ -278,16 +278,9 @@
 
 <div class='col-xs-6 col-sm-3 sidebar-offcanvas' id='sidebar'>
           <div class='list-group'>
-            <a href='#' class='list-group-item active'>Sigcomm</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
-            <a href='#' class='list-group-item'>Link</a>
+            <a href='#' class='https://scholar.google.com/'>Google Scholar</a>
+            <a href='#' class='https://www.researchgate.net/'>Research Gate</a>
+            <a href='#' class='https://arxiv.org/'>arXiv</a>
           </div>
         </div><!--/.sidebar-offcanvas-->
   </div>
