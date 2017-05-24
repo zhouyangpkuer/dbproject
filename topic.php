@@ -113,7 +113,7 @@
   mysqli_select_db($con, $DBName) or die("Cant connect into database");
 
 
-  $SQL = "SELECT * FROM Message WHERE TopicId = '".$topic_id."';";
+  $SQL = "SELECT * FROM Message WHERE TopicId = '".$topic_id."' order by FLoorNumber asc;";
   $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
   $total_num_message = mysqli_num_rows($result_id);
 
@@ -124,29 +124,16 @@
 
       for($i = 0; $i < $total_num_message; $i++)
       {
-        $datas = mysqli_fetch_array($result_id);
 
+        $datas_topic = mysqli_fetch_array($result_id);
         
-        $TopicId = $datas["TopicId"];
-
-        $SQL = "SELECT * FROM Topic WHERE TopicId = '".$TopicId."';";
-        $result_id_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-
-
-        $datas_topic = mysqli_fetch_array($result_id_topic);
         
-        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"];
-        
-        print "<div class='col-lg-4'><h2>";
-          print $datas_topic["TopicTitle"];
-          print "</h2><p>";
-          print $datas_topic["TopicContent"];
+        print "<div class='col-lg-4'>";
+
+        print "<p>";
+          print $datas_topic["MsgContent"];
           print "
           </p>  
-          <p>
-          <a class='btn btn-default' href='";
-          print $topic_url; 
-          print "' role='button'>View details &raquo;</a></p>
         </div><!-- /.col-lg-4 -->";
       }
 
