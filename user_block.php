@@ -32,11 +32,11 @@
   $SQL = "INSERT INTO favoriteBlock(UserId, BlockID) VALUES('".$UserId."', '".$BlockID."');";
   $result_id = mysqli_query($con, $SQL);
 
-
+  print $SQL;
 
   $block_url = "./block.php?block_name=".$block_name."&user_id=".$user_id;
 
-    header("Location:".$block_url);
+    // header("Location:".$block_url);
 
 ?>
 
