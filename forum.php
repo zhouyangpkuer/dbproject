@@ -97,13 +97,10 @@
 
   <div class="row">
 
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+      <div class="jumbotron">
+            <h1>Blocks in Forum!</h1>
+            <p>You can collect each block, and then you will get more details about this block in your manager plane!</p>
+      </div>
 
 <?php
   
@@ -185,14 +182,14 @@
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
 
   <hr>
+
   <div class="row">
+      <div class="jumbotron">
+            <h1>Topics in Forum!</h1>
+            <p>You can click and collect each Topic, and then you will get more details about this topic!</p>
+      </div>
 
 <?php
   
