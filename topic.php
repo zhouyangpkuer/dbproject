@@ -167,7 +167,7 @@ print "<form class='form-horizontal' action='./writemessage.php?topic_id=";
 
   <textarea class="form-control" rows="3" name="message"></textarea>
 
-  <button type="submit" class="btn btn-default">Submit</button>
+  <button type="submit" class="btn btn-lg btn-success" align="center">Submit</button>
 </form>
 
   </div>
