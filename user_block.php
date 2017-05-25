@@ -14,9 +14,9 @@
   mysqli_select_db($con, $DBName) or die("Cant connect into database");
 
 
-  $BlockID = $datas["block_id"];
+  $BlockID = $_GET["block_id"];
 
-  $UserId = $datas["user_id"];
+  $UserId = $_GET["user_id"];
     
     $SQL = "SELECT * FROM User WHERE UserId = '".$UserId."';";
     $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
