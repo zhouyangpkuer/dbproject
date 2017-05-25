@@ -169,6 +169,8 @@
   		  }
   mysqli_close();
 ?>
+
+
   </div>
 
   <hr>
@@ -231,10 +233,7 @@
 			         print "</p></div><!-- /.col-lg-4 -->";
 			      }
 			
-
-
 			  print "</div><!-- /.row -->";
-		}
           
   mysqli_close();
 ?>
