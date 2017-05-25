@@ -173,6 +173,18 @@
 
   </div>
 
+
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+
+
   <hr>
   <div class="row">
 
@@ -204,7 +216,7 @@
 			        
 			        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$_GET["user_id"];
 			        
-			        print "<div class='col-lg-4'><h2>";
+			        print "<div class='col-xs-6 col-lg-4'><h2>";
 			          print $datas_topic["TopicTitle"];
 			          print "</h2><p>";
 			          print $datas_topic["TopicContent"];
