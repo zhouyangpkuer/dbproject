@@ -160,7 +160,7 @@
   mysqli_close();
 
 
-print "<br/><br/><br/><br/><br/>"
+print "<br/><br/><br/><br/><br/>";
       print "<div class='jumbotron'>
             <h1>Type your own Comments!</h1>
       </div>";
