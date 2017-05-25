@@ -143,7 +143,7 @@
         
         print "<div class='jumbotron'>";
     
-    print "<h3> ".$datas_topic['TopicTime']."<br/>Floor ";
+    print "<h3> ".$datas_topic['MsgTime']."<br/>Floor ";
           print $datas_topic["FLoorNumber"];
           print " said: </h3>";
         print "<p>";
