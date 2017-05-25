@@ -25,7 +25,7 @@
     $user_id = $datas["UserName"];
 
 
-  $SQL = "INSERT INTO Message(MsgId, TopicId, UserId, MsgContent, MsgTime, FLoorNumber) VALUES(null, ".$topic_id.", ".$user_id.", '".$message."', null, ".$total_num_test.");";
+  $SQL = "INSERT INTO Message(MsgId, TopicId, UserId, MsgContent, MsgTime, FLoorNumber) VALUES (null, ".$topic_id.", ".$user_id.", '".$message."', null, ".$total_num_message.");";
 
   $result_id = mysqli_query($con, $SQL);
 
