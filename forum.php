@@ -112,7 +112,7 @@
 
   $SQL = "SELECT * FROM Block;";
   $result_block = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
-  $total_num_block = mysqli_num_rows($result_block)
+  $total_num_block = mysqli_num_rows($result_block);
 
  
   print "<div class='row'>";
@@ -139,8 +139,7 @@
 
           print "./pic/".$block_name.".jpg"; 
 
-          print "' alt='Generic placeholder image' width='140' height='140'> 
-          <h2>";
+          print "' alt='Generic placeholder image' width='140' height='140'> <h2>";
           print $block_name;
         
           print "</h2>
@@ -162,7 +161,6 @@
         	
         }
          print "</p>
-
         </div><!-- /.col-lg-4 -->";
       
   mysqli_close();
