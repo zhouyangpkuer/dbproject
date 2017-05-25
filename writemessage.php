@@ -29,11 +29,11 @@
 
   $result_id = mysqli_query($con, $SQL);
 
-  // print $SQL;
+  print $SQL;
 
-  $forum_url = "./topic.php?topic_id=".$topic_id."&user_id=".$UserId;
+  // $forum_url = "./topic.php?topic_id=".$topic_id."&user_id=".$UserId;
 
-    header("Location:".$forum_url);
+    // header("Location:".$forum_url);
 
 
 
