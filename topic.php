@@ -162,7 +162,7 @@
 
 print "<br/><br/><br/><br/><br/>";
       print "<div class='jumbotron'>
-            <h4>Type your own Comments!</h4>
+            <h3>Type your own Comments!</h3>
       </div>";
 
 
