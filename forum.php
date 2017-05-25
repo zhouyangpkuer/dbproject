@@ -167,8 +167,23 @@
 
 
   		  }
+  mysqli_close();
+?>
+  </div>
 
+  <hr>
+  <div class="row">
 
+<?php
+  
+
+  $Hostname = "localhost";
+  $DBName = "forum";
+  $User = "root";
+  $PasswordP = "";
+
+  $con = mysqli_connect($Hostname, $User, $PasswordP) or die("Cant connect into database");
+  mysqli_select_db($con, $DBName) or die("Cant connect into database");
 
 
 
@@ -219,17 +234,15 @@
 
 
 			  print "</div><!-- /.row -->";
-
-      
+		}
+          
   mysqli_close();
 ?>
   </div>
 
-    
 
 
 
-    
 
       <hr>
 
