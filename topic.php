@@ -159,15 +159,15 @@
 
   mysqli_close();
 
-print "<form class='form-horizontal' action='./writemessage.php?topic_id=";
+print "<form class='form-horizontal'  align='center' action='./writemessage.php?topic_id=";
   print $topic_id."&user_id=".$user_id."&total_num_message=".$total_num_message;
   print "' method = 'post'>";
 
 ?>
 
   <textarea class="form-control" rows="3" name="message"></textarea>
-
-  <button type="submit" class="btn btn-lg btn-success" align="center">Submit</button>
+  <br/>
+  <button type="submit" class="btn btn-lg btn-success">Submit</button>
 </form>
 
   </div>
