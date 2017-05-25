@@ -154,6 +154,7 @@
           print $datas_topic["TopicTitle"];
           print "</h2><p>";
           print $datas_topic["TopicContent"];
+          print "<br/>".$datas_topic['TopicTime'];
           print "
           </p>  
           <p>

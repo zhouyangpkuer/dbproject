@@ -117,6 +117,8 @@
   $datas_topic = mysqli_fetch_array($result_id);
 
   print "Topic: ".$datas_topic['TopicTitle']." !";
+  print "<br/>".$datas_topic['TopicTime'];
+
   print "</h3>
             <p>Here are all the messages of this topic!</p>
       </div>
@@ -141,10 +143,9 @@
         
         print "<div class='jumbotron'>";
     
-    print "<h3> Floor ";
+    print "<h3> ".$datas_topic['TopicTime']."<br/>Floor ";
           print $datas_topic["FLoorNumber"];
           print " said: </h3>";
-
         print "<p>";
           print $datas_topic["MsgContent"];
           print "
