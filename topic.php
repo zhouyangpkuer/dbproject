@@ -101,7 +101,9 @@
 
 <?php
   $topic_id = $_GET["topic_id"];
-  
+  $user_id = $_GET['user_id'];
+
+
   $Hostname = "localhost";
   $DBName = "forum";
   $User = "root";
@@ -156,7 +158,18 @@
   print "</div><!-- /.row -->";
 
   mysqli_close();
+
+print "<form class='form-horizontal' action='./writemessage.php?topic_id=";
+  print $topic_id."&user_id=".$user_id."&total_num_message=".$total_num_message;
+  print "' method = 'post'>";
+
 ?>
+
+  <textarea class="form-control" rows="3" name="message"></textarea>
+
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
+
   </div>
 
     
