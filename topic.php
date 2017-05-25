@@ -159,7 +159,11 @@
 
   mysqli_close();
 
-print "<form class='form-horizontal'  align='center' action='./writemessage.php?topic_id=";
+
+
+
+
+print "<form class='form-horizontal'  align='center' placeholder='Type your own Comments!' action='./writemessage.php?topic_id=";
   print $topic_id."&user_id=".$user_id."&total_num_message=".$total_num_message;
   print "' method = 'post'>";
 
