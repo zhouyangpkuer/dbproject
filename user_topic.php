@@ -14,7 +14,7 @@
   mysqli_select_db($con, $DBName) or die("Cant connect into database");
 
 
-  $BlockID = $_GET["block_id"];
+  $TopicID = $_GET["topic_id"];
 
   $UserId = $_GET["user_id"];
     
@@ -25,7 +25,7 @@
 
 
 
-  $SQL = "INSERT INTO favoriteBlock(UserId, BlockID) VALUES('".$UserId."', '".$BlockID."');";
+  $SQL = "INSERT INTO favoriteTopic(UserId, TopicId) VALUES('".$UserId."', '".$TopicID."');";
   $result_id = mysqli_query($con, $SQL);
 
   // print $SQL;
