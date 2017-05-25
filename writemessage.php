@@ -2,7 +2,7 @@
 <head> <title> summit.php </title>
 </head>
 
-<?php>  
+<?php  
     $UserId = $_GET["user_id"];
     $topic_id = $_GET["topic_id"];
     $total_num_message = $_GET["total_num_message"];
