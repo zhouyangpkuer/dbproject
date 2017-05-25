@@ -100,9 +100,7 @@
 
 
 <?php
-  // $block_name = $_GET["block_name"];
   
-
 
   $Hostname = "localhost";
   $DBName = "forum";
@@ -152,7 +150,7 @@
 
         $SQL_test = "SELECT * FROM favoriteBlock where UserId = '".$UserId."', BlockId = '".$BlockID."';";
   		$result_test = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
- 		$total_num_test = mysqli_num_rows($result_block)
+ 		$total_num_test = mysqli_num_rows($result_block);
   	
   		if($total_num_test == 0)
   		{
@@ -164,7 +162,7 @@
         	
         }
          print "</p>
-         
+
         </div><!-- /.col-lg-4 -->";
       
   mysqli_close();
