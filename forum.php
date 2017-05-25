@@ -148,6 +148,8 @@
 
 
         $SQL_test = "SELECT * FROM favoriteBlock where UserId = '".$UserId."' and BlockId = '".$BlockID."';";
+        print $SQL_test;
+        
   		$result_test = mysqli_query($con, $SQL_test) or die("DATABASE ERROR!");
  		$total_num_test = mysqli_num_rows($result_test);
   	

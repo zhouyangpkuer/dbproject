@@ -17,6 +17,12 @@
   $BlockID = $datas["block_id"];
 
   $UserId = $datas["user_id"];
+    
+    $SQL = "SELECT * FROM User WHERE UserId = '".$UserId."';";
+    $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
+    $datas = mysqli_fetch_array($result_id);
+    $user_id = $datas["UserName"];
+
 
 
   $SQL = "INSERT INTO favoriteBlock(UserId, BlockID) VALUES('".$UserId."', '".$BlockID."');";
@@ -24,9 +30,9 @@
 
   // print $SQL;
 
-  $block_url = "./block.php?block_name=".$block_name."&user_id=".$user_id;
+  $forum_url = "./forum.php?user_id=".$user_id;
 
-    header("Location:".$block_url);
+    header("Location:".$forum_url);
 
 ?>
 
