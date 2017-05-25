@@ -4,6 +4,8 @@
 
 <?php  
     $UserId = $_GET["user_id"];
+    print $UserId;
+
     $topic_id = $_GET["topic_id"];
     $total_num_message = $_GET["total_num_message"];
     $total_num_message ++;
@@ -19,10 +21,10 @@
   $message = $_REQUEST["message"];
 
 
-    $SQL = "SELECT * FROM User WHERE UserId = '".$UserId."';";
+    $SQL = "SELECT * FROM User WHERE UserName = '".$UserId."';";
     $result_id = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
     $datas = mysqli_fetch_array($result_id);
-    $user_id = $datas["UserName"];
+    $user_id = $datas["UserId"];
 
 
   $SQL = "INSERT INTO Message(MsgId, TopicId, UserId, MsgContent, MsgTime, FLoorNumber) VALUES (null, ".$topic_id.", ".$user_id.", '".$message."', null, ".$total_num_message.");";
