@@ -162,7 +162,7 @@
 
 print "<br/><br/><br/><br/><br/>";
       print "<div class='jumbotron'>
-            <h1>Type your own Comments!</h1>
+            <h4>Type your own Comments!</h4>
       </div>";
 
 
@@ -172,7 +172,7 @@ print "<form class='form-horizontal'  align='center' action='./writemessage.php?
 
 ?>
 
-  <textarea class="form-control" rows="3" name="message"></textarea>
+  <textarea class="form-control" rows="6" name="message"></textarea>
   <br/>
   <button type="submit" class="btn btn-lg btn-success">Submit</button>
 </form>
