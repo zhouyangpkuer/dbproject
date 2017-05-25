@@ -56,10 +56,18 @@
         </div>  
       <ul class="nav navbar-nav navbar-right">
         <li>
+        <?php
+        print "
+          <a class='navbar-brand' href='./forum.php?user_id=".$_GET["user_id"];  
+          print "'>";
+          ?>
+          Forum
+          </a> 
+        </li>
+        <li>
           <a class='navbar-brand' href='./index.html'>
           PaperHeaven
           </a> 
-
         </li>
       </ul>
       
