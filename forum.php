@@ -166,13 +166,13 @@
         </div><!-- /.col-lg-4 -->";
 
 
-        print "<hr>";
+  		  }
 
 
 
 
 
- 			 $SQL = "SELECT * FROM Topic WHERE BlockId = '".$BlockId."';";
+ 			 $SQL = "SELECT * FROM Topic;";
  			 $result_topic = mysqli_query($con, $SQL) or die("DATABASE ERROR!");
  			 $total_num_topic = mysqli_num_rows($result_topic);
 			
@@ -218,9 +218,8 @@
 			
 
 
-
 			  print "</div><!-- /.row -->";
-  		  }
+
       
   mysqli_close();
 ?>
