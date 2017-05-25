@@ -148,7 +148,7 @@
 
 
         $SQL_test = "SELECT * FROM favoriteBlock where UserId = '".$UserId."' and BlockId = '".$BlockId."';";
-        print $SQL_test;
+        // print $SQL_test;
         
   		$result_test = mysqli_query($con, $SQL_test) or die("DATABASE ERROR!");
  		$total_num_test = mysqli_num_rows($result_test);
@@ -159,7 +159,7 @@
         }
         else
         {
-        	print "<a class='btn btn-lg btn-success' href='#' role='button'>Collected!</a>";
+        	print "<a class='btn btn-primary' href='#' role='button'>Collected!</a>";
         	
         }
          print "</p>
