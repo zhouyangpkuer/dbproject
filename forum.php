@@ -134,34 +134,35 @@
 
 
 
-   //      print "<div class='col-lg-4'>
-   //     		<img class='img-circle' src='";
+        print "<div class='col-lg-4'>
+       		<img class='img-circle' src='";
 
-   //        print "./pic/".$block_name.".jpg"; 
+          print "./pic/".$block_name.".jpg"; 
 
-   //        print "' alt='Generic placeholder image' width='140' height='140'> <h2>";
-   //        print $block_name;
+          print "' alt='Generic placeholder image' width='140' height='140'> <h2>";
+          print $block_name;
         
-   //        print "</h2>
-   //        <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
-   //          <p>";
+          print "</h2>
+          <p>Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.</p>
+            <p>";
 
 
-   //      $SQL_test = "SELECT * FROM favoriteBlock where UserId = '".$UserId."', BlockId = '".$BlockID."';";
-  	// 	$result_test = mysqli_query($con, $SQL_test) or die("DATABASE ERROR!");
- 		// $total_num_test = mysqli_num_rows($result_test);
+        $SQL_test = "SELECT * FROM favoriteBlock where UserId = '".$UserId."', BlockId = '".$BlockID."';";
+  		$result_test = mysqli_query($con, $SQL_test) or die("DATABASE ERROR!");
+ 		$total_num_test = mysqli_num_rows($result_test);
   	
-  	// 	if($total_num_test == 0)
-  	// 	{
-   //          print "<a class='btn btn-lg btn-success' href='"."./user_block.php"."?block_id=".$BlockId."&user_id=".$UserId."' role='button'>Collect Now!</a>";
-   //      }
-   //      else
-   //      {
-   //      	print "<a class='btn btn-lg btn-success' href='#' role='button'>Collected!</a>";
+  		if($total_num_test == 0)
+  		{
+            print "<a class='btn btn-lg btn-success' href='"."./user_block.php"."?block_id=".$BlockId."&user_id=".$UserId."' role='button'>Collect Now!</a>";
+        }
+        else
+        {
+        	print "<a class='btn btn-lg btn-success' href='#' role='button'>Collected!</a>";
         	
-   //      }
-   //       print "</p>
-   //      </div><!-- /.col-lg-4 -->";
+        }
+         print "</p>
+        </div><!-- /.col-lg-4 -->";
+    }
       
   mysqli_close();
 ?>
