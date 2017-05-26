@@ -122,7 +122,7 @@
   print "<br/>".$datas_topic['TopicTime'];
 
   print "</h3>
-            <p>Here are all the messages of this topic!</p>
+            <p>".$datas_topic[TopicContent]."</p>
       </div>
   <div class='row'>";
 
