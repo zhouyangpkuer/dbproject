@@ -155,7 +155,18 @@
 
   		$result_test = mysqli_query($con, $SQL_test) or die("DATABASE ERROR!");
  		$total_num_test = mysqli_num_rows($result_test);
-  	
+		
+		// $block_url = "./block.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$_GET["user_id"];
+        $block_url = "./block.php?block_name=".$datas_block["BlockName"]."&user_id=".$user_id;
+  		
+
+  		print "
+          <a class='btn btn-default' href='";
+          print $block_url; 
+          print "' role='button'>View details &raquo;</a></p><p>";
+      
+
+
   		if($total_num_test == 0)
   		{
             print "<a class='btn btn-lg btn-success' href='"."./user_block.php"."?block_id=".$BlockId."&user_id=".$UserId."' role='button'>Collect Now!</a>";
