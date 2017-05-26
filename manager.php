@@ -16,7 +16,7 @@
 
     <!-- <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" /> -->
 
-    <link href='css/adjust.css' rel='stylesheet'>
+    <!-- <link href='css/adjust.css' rel='stylesheet'> -->
 
 
 
@@ -146,7 +146,7 @@
   $total_num_block = mysqli_num_rows($result_id);
   
 
-  print "<div class='row row-eq-height'>";
+  print "<div class='row' style='height:100px;'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_block; $i++)
@@ -261,7 +261,7 @@
 
 
   
-  print "<div class='row row-eq-height'>";
+  print "<div class='row'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_topic; $i++)
