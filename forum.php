@@ -141,7 +141,7 @@
         print "<div style='height:450px;' class='col-lg-4'>
        		<img class='img-circle' src='";
 
-          print "./pic/".$block_name.".jpg"; 
+          print "./pic/".str_replace('/', ':', $datas_block["BlockName"]).".jpg"; 
 
           print "' alt='Generic placeholder image' width='140' height='140'> <h2>";
           print $block_name;
