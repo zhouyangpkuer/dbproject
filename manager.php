@@ -161,7 +161,7 @@
         $datas_block = mysqli_fetch_array($result_id_block);
         $block_url = "./block.php?block_name=".$datas_block["BlockName"]."&user_id=".$Username;
         
-        print "<div style='height:400px;' class='col-xs-6 col-lg-4'>
+        print "<div style='height:300px;' class='col-xs-6 col-lg-4'>
           <a href='".$block_url; 
           print "'> <img class='img-circle' src='";
 
@@ -277,7 +277,7 @@
         
         $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$Username;
         
-        print "<div class='col-xs-6 col-lg-4'><h2>";
+        print "<div style='height:400px;' class='col-xs-6 col-lg-4'><h2>";
           print $datas_topic["TopicTitle"];
           print "</h2><p>";
           print $datas_topic["TopicContent"];
