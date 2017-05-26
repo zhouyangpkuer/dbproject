@@ -165,7 +165,7 @@
           <a href='".$block_url; 
           print "'> <img class='img-circle' src='";
 
-          print "./pic/".$datas_block["BlockName"].".jpg"; 
+          print "./pic/".str_replace('/', ':', $datas_block["BlockName"]).".jpg"; 
 
           print "' alt='Generic placeholder image' width='140' height='140'></a> 
           <h2>";
