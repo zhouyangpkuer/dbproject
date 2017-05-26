@@ -13,10 +13,10 @@
 
     <!-- Bootstrap core CSS -->
     <link href='css/bootstrap.min.css' rel='stylesheet'>
-    
-    <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
 
-    <!-- <link href='css/adjust.css' rel='stylesheet'> -->
+    <!-- <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" /> -->
+
+    <link href='css/adjust.css' rel='stylesheet'>
 
 
 
@@ -277,7 +277,7 @@
         
         $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$Username;
         
-        print "<div class='col-xs-6 col-lg-4 panel'><h2>";
+        print "<div class='col-xs-6 col-lg-4'><h2>";
           print $datas_topic["TopicTitle"];
           print "</h2><p>";
           print $datas_topic["TopicContent"];

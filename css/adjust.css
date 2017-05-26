@@ -1,4 +1,4 @@
-/*.row {
+.row {
  display: table;
 }
 
@@ -6,13 +6,6 @@
  float: none;
  display: table-cell;
  vertical-align: top;
-}*/
-
-
-.equal,. equal> div[class*='col-'] { 
- display: -webkit-box;
- display: -webkit-flex;
- display: flex;
- flex:1 0 auto;
 }
+
 
