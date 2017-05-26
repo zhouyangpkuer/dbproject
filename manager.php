@@ -14,7 +14,7 @@
     <!-- Bootstrap core CSS -->
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     
-    <link href='css/adjust.css' rel='stylesheet'>
+    <!-- <link href='css/adjust.css' rel='stylesheet'> -->
 
 
 
@@ -25,7 +25,7 @@
 
     <!-- Custom styles for this template -->
     <link href='css/jumbotron.css' rel='stylesheet'>
-    
+
 
     <!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
     <!--[if lt IE 9]><script src='../../assets/js/ie8-responsive-file-warning.js'></script><![endif]-->
@@ -113,7 +113,7 @@
 
 
 
-<div class="row row-offcanvas row-offcanvas-right">
+<div class="row row-offcanvas row-offcanvas-right ">
 
   <div class="col-xs-12 col-sm-9">
 
@@ -144,7 +144,7 @@
   $total_num_block = mysqli_num_rows($result_id);
   
 
-  print "<div class='row'>";
+  print "<div class='row row-eq-height'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_block; $i++)
@@ -259,7 +259,7 @@
 
 
   
-  print "<div class='row'>";
+  print "<div class='row row-eq-height'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_topic; $i++)
