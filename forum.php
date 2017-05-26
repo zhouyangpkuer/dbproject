@@ -138,7 +138,7 @@
 
 
 
-        print "<div class='col-lg-4'>
+        print "<div style='height:300px;' class='col-lg-4'>
        		<img class='img-circle' src='";
 
           print "./pic/".$block_name.".jpg"; 
@@ -231,7 +231,7 @@
 			        
 			        $topic_url = "./topic.php?topic_id=".$datas_topic["TopicId"]."&user_id=".$_GET["user_id"];
 			        
-			        print "<div class='col-xs-6 col-lg-4'><h2>";
+			        print "<div style='height:400px;' class='col-xs-6 col-lg-4'><h2>";
 			          print $datas_topic["TopicTitle"];
 			          print "</h2><p>";
 			          print $datas_topic["TopicContent"];
