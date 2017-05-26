@@ -14,6 +14,8 @@
     <!-- Bootstrap core CSS -->
     <link href='css/bootstrap.min.css' rel='stylesheet'>
     
+    <link rel="stylesheet" href="http://getbootstrap.com.vn/examples/equal-height-columns/equal-height-columns.css" />
+
     <!-- <link href='css/adjust.css' rel='stylesheet'> -->
 
 
