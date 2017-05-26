@@ -146,7 +146,7 @@
   $total_num_block = mysqli_num_rows($result_id);
   
 
-  print "<div class='row' style='height:100px;'>";
+  print "<div class='row'>";
   // print $total_num_block; 
 
       for($i = 0; $i < $total_num_block; $i++)
@@ -161,7 +161,7 @@
         $datas_block = mysqli_fetch_array($result_id_block);
         $block_url = "./block.php?block_name=".$datas_block["BlockName"]."&user_id=".$Username;
         
-        print "<div class='col-xs-6 col-lg-4'>
+        print "<div style='height:100px;' class='col-xs-6 col-lg-4'>
           <a href='".$block_url; 
           print "'> <img class='img-circle' src='";
 
