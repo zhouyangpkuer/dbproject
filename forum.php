@@ -138,7 +138,7 @@
 
 
 
-        print "<div style='height:300px;' class='col-lg-4'>
+        print "<div style='height:400px;' class='col-lg-4'>
        		<img class='img-circle' src='";
 
           print "./pic/".$block_name.".jpg"; 
